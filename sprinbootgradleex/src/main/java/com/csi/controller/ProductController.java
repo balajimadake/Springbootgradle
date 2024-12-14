@@ -37,8 +37,8 @@ public class ProductController {
     }
 
     @GetMapping("/sortbyprice")
-    public ResponseEntity<List<Product>> sortByPrice(@RequestParam(required = false,defaultValue = "") String price){
-        return ResponseEntity.ok(productService.sortByPrice(price));
+    public ResponseEntity<List<Product>> sortByProductPrice(@RequestParam(required = false,defaultValue = "") String price){
+        return ResponseEntity.ok(productService.sortByProductPrice(price));
     }
 
     @PutMapping("/update/{productId}")

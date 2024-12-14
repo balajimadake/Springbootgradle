@@ -24,5 +24,5 @@ public interface IProductService {
     void deleteById(long productId);
 
 
-    List<Product> sortByPrice(String price);
+    List<Product> sortByProductPrice(String price);
 }

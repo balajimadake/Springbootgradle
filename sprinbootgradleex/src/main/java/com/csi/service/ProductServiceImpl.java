@@ -46,7 +46,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public List<Product> sortByPrice(String price) {
+    public List<Product> sortByProductPrice(String price) {
         return switch (price){
             case "PriceASC"->productRepository.findAll().stream().sorted(Comparator.comparing(Product::getProductPrice)).toList();
             case "PriceDSC"->productRepository.findAll().stream().sorted(Comparator.comparing(Product::getProductPrice).reversed()).toList();
